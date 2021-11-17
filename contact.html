@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+            background-color:#fada72;;
+            }
+        </style>
+    </head>
+    <body>
+       <h2><u>Contact us</u>:
+       </h2>
+           <p>Email:
+        <a href="mailto:chandakresham2001@gmail.com" >Click here</a>
+           </p> 
+           <button id="btn">Change the background color</button>
+           <pre>                                                        <a id="id" href="images/Thankyou.gif" target="_blank"><img src="images/Thankyou.gif"></a>
+        </pre>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $('#id').hide(0,function(){console.log("hidden")});
+        $('#id').show(8000,function(){console.log("shown")});
+        $('#btn').click(function(){
+            $('body').css("background-color","rgb(219, 154, 154)");
+        });
+        
+    </script>
+</html>

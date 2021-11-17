@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color:rgb(223, 217, 217);
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+    
+            $(document).ready(function(){
+                
+                $("a").focus(function(){
+                    $(this).css("background-color","lightcoral");
+                });
+                $("a").blur(function(){
+                    $(this).css("background-color","lightseagreen");
+                });
+            }
+            )
+            </script>
+    </head>
+    <body>
+        <p>
+        <nav style="text-align:center">
+            <div style="background-color:#F0E68C; margin:0px;">
+    
+           <button type="button"><a href="Introduction.html" target="fr2">Introduction</a></button>
+           <button type="button"><a href="methods.html" target="fr2">Methods</a></button>
+           <button type="button"><a href="ineffective_forms.html" target="fr2">Ineffective forms</a></button>
+           <button type="button"><a href="Strategy.html" target="fr2">Strategy</a></button>
+            </div></nav>
+        </p>
+            <iframe name="fr2" height="350px" width="100%">
+        <img src="digital.jpg";
+          </iframe>
+    </body>
+</html>

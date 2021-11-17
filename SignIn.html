@@ -1,0 +1,88 @@
+<html>  
+    <head>
+        <style>
+             body{
+                                background-color:rgb(223, 217, 217);
+                        }
+                        #id
+                        {
+                                width:300px;
+                                background-color:#fada72;
+                                color:
+                                align-items: center;
+                                padding:5px;
+                                border:6px solid black;
+                                border-radius:8px;
+                                margin:60px 0px 2px 450px;
+                        }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+    
+            $(document).ready(function(){
+                
+                $("input").focus(function(){
+                    $(this).css("background-color","lightcoral");
+                });
+                $("input").blur(function(){
+                    $(this).css("background-color","lightseagreen");
+                });
+                $('#submit').on({ click:function(){console.log('Thanks for logging your account',this);},
+mouseleave:function(){
+console.log("mouseleave");
+}}
+)
+            }
+            )
+            </script>
+    </head>
+<body>  
+<div id="id" align="center">
+<h2><u>Sign in</u>:</h2> 
+<hr> 
+<form onsubmit="submit_form()">  
+<table cellspacing="2" align="center" cellpadding="8" border="0">  
+<tr><td> Username</td>   
+<td><input type="text" placeholder="Enter your email id" id="email"/> </td></tr>  
+<tr><td> Password</td>  
+<td><input type="password" placeholder="Set a password" id="pwd1"></td></tr>  
+<tr>
+    <td><input id="submit" type="submit" value="Login"/>  </td>
+    <td><input type="button" value="Register" onClick="create()"/> </td>
+    </tr> 
+</table>  
+</form> 
+</div> 
+<script type="text/javascript">  
+function submit_form(){
+    var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		else if(pwd.length < 8 || pwd.length > 8)
+		{
+			alert("Password min and max length is 8.");
+		}
+		else
+		{
+	alert('Thank You for Login & You are Redirecting to home page');
+       window.location = "home.html";
+			}   
+}  
+function create(){  
+window.location="registration.html";  
+}  
+</script>  
+</body>  
+</html>  

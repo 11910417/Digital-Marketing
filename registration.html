@@ -1,0 +1,108 @@
+<html>
+        <head>
+                <style>
+                        body{
+                                background-color:rgb(223, 217, 217);
+                        }
+                        #id
+                        {
+                                width:800px;
+                                background-color:#fada72;
+                                align-items: center;
+                                padding:5px;
+                                border:6px solid black;
+                                border-radius:8px;
+                                margin:20px 80px 40px 200px;
+                        }
+                </style>
+               <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <script>
+            
+                    $(document).ready(function(){
+                        
+                        $("input").focus(function(){
+                            $(this).css("background-color","lightcoral");
+                        });
+                        $("input").blur(function(){
+                            $(this).css("background-color","lightseagreen");
+                        });
+                        $('#submit').on({ click:function(){console.log('Thanks for creating your account',this);},
+mouseleave:function(){
+console.log("mouseleave");
+}}
+)
+$("button").focus(function(){
+                            $(this).css("background-color","lightskyblue");
+                        });
+                        $("#btn3").click(function(){
+          alert("Name: " + $("#n1").val()+"\nEmail: " + $("#e1").val()+"\nPassword: " + $("#p1").val());
+        });
+                    }
+                    )
+         
+    
+                    </script>
+        </head>   
+<body>  
+<div id="id" align="center">
+<h2> CREATE YOUR ACCOUNT</h2>  
+<hr>
+<table cellspacing="2" align="center" cellpadding="8" border="0">  
+<tr><td> Name</td>   
+<td><input type="text" placeholder="Enter your name" id="n1"></td></tr>  
+<tr><td>Email </td>  
+<td><input type="text" placeholder="Enter your email id" id="e1"></td></tr>  
+<tr><td> Set Password</td>  
+<td><input type="password" placeholder="Set a password" id="p1"></td></tr>  
+<tr><td>Confirm Password</td>  
+<td><input type="password" placeholder="Confirm your password" id="p2"></td></tr>  
+ <tr><td>
+<pre><p>                       By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                                                <input id="submit" type="submit" value="Create" onClick="create_account()"/> <br>
+                                              <button id="btn3" align="center">Show value</button></pre></td></tr>
+</table> 
+<hr>
+Already having account then <button type="button">Go to <a href="SignIn.html">Sign in</a> page.</button>               
+ 
+</div>
+<script type="text/javascript">  
+function create_account(){  
+var n=document.getElementById("n1").value;  
+var e=document.getElementById("e1").value;  
+var p=document.getElementById("p1").value;  
+var cp=document.getElementById("p2").value;  
+//Code for password validation  
+        var letters = /^[A-Za-z]+$/;  
+        var email_val = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
+//other validations required code  
+if(n==''||e==''||p==''||cp==''){  
+alert("Enter each details correctly");  
+}  
+else if(!letters.test(n))  
+        {  
+            alert('Name is incorrect must contain alphabets only');  
+        }  
+else if (!email_val.test(e))  
+        {  
+            alert('Invalid email format please enter valid email id');  
+        }  
+else if(p!=cp)  
+{  
+alert("Passwords not matching");  
+}  
+else if(document.getElementById("p1").value.length > 12)  
+{  
+alert("Password maximum length is 12");  
+}  
+else if(document.getElementById("p1").value.length < 8)  
+{  
+alert("Password minimum length is 8");  
+}  
+else{  
+alert("Your account has been created successfully."); 
+}  
+  
+  }
+</script>  
+</body>  
+</html>  

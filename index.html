@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Marketing</title>
+        <link rel="shortcut icon" href="images/logo.jpeg">
+        <script type="text/javascript">
+            alert("Hello,I am an alert box. Welcome to Digital Marketing Website.")
+            function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Pleasant to see you " + user+".");
+    
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}</script>
+        <style>
+        body {
+            background-color: lightblue;
+          }
+           
+           h1
+           {  
+              color:white;  
+              background-color:red;  
+              padding-left: 35px;  
+           }
+           
+           p
+           {  
+              color:whitesmoke; 
+              font-size: 45px;
+              background-color:yellow;
+              text-align: center;	
+           } 
+           marquee
+           {
+               background-color:lightseagreen;
+               color:white;
+           }
+          </style> 
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+          <script>
+      
+              $(document).ready(function(){
+                  
+                  $("a").focus(function(){
+                      $(this).css("background-color","lightcoral");
+                  });
+                  $("a").blur(function(){
+                      $(this).css("background-color","lightseagreen");
+                  });
+              }
+              )
+              </script>
+    </head>
+    
+    <body onload="checkCookie()">
+        <audio autoplay="on">  
+            <source src="audio/acoustic-guitar.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <h1 align="center">Welcome To Digital Marketing</h1>
+        <br>
+         <nav style="text-align:center">
+        <div style="background-color:#F0E68C; margin:0px;">
+       <button type="button"><a href="home.html" target="fr">Home</a></button>
+       <button type="button"><a href="services.html" target="fr">Services</a></button>
+        <button type="button"><a href="registration.html" target="fr">Registration</a></button>
+        <button type="button"><a href="SignIn.html" target="fr">Sign in</a></button>
+        <button type="button"><a href="About.html" target="fr">About us</a></button>
+        <button type="button"><a href="feedback.html" target="fr">Feedback</a></button>
+        <button type="button"><a href="contact.html" target="fr">Contact</a></button>
+        
+    </div></nav>
+         <br>
+        <iframe name="fr" height="405.4px" width="100%"></iframe>
+        <marquee>******&#128578&#128578&#128187Created by Resham Chandak&#128187&#128578&#128578******</marquee>
+        
+       
+    </body>
+</html>

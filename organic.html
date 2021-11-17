@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex,nofollow">
+        <script lang="Javascript">
+            function gotoPage()
+            {
+                window.location.href=document.loc.HostnameField.value;
+            }
+            
+        </script>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+    
+            $(document).ready(function(){
+                
+                $("input").focus(function(){
+                    $(this).css("background-color","lightcoral");
+                });
+                $("input").blur(function(){
+                    $(this).css("background-color","lightseagreen");
+                });
+            }
+            )
+            </script>
+        <style>
+            .trans
+            {
+                background-color:#ffffff;
+                border:1px solid black;
+                color:red;
+                font-size:20px;
+                text-align:justify;
+            }
+        </style>
+    </head>
+    <body class="trans">
+        <h2><u>Seo services</u>:</h2>
+            <dl>
+                <dt>Search engine optimization (SEO) is the process of improving the quality and quantity of website traffic to a website or a web page from search engines. SEO targets unpaid traffic (known as "natural" or "organic" results) rather than direct traffic or paid traffic. Unpaid traffic may originate from different kinds of searches, including image search, video search, academic search, news search, and industry-specific vertical search engines.
+
+                    As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate search engine behavior, what people search for, the actual search terms or keywords typed into search engines, and which search engines are preferred by their targeted audience. SEO is performed because a website will receive more visitors from a search engine when websites rank higher on the search engine results page (SERP). These visitors can then potentially be converted into customers.</dt>
+                <br><dt>Search engine services:
+                    <form name="loc" method="POST">
+                    <input type="text" maxlength=100 name="HostnameField" value="https://">
+                    <input type="button" name="Search" value="Go" onClick="gotoPage()">
+                    <p style="color:grey;opacity:0.5;">Type anything like ums.lpu.in</p>
+                </dt>
+            </dl>
+    </body>
+</html>
